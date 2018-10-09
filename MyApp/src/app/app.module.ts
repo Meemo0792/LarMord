@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { IfdemoComponent } from './ifdemo/ifdemo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    LoginComponent,
+    IfdemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule,FormsModule
   ],
   providers: [],
-  bootstrap: [HelloComponent]
+  bootstrap: [IfdemoComponent]
 })
 export class AppModule { }

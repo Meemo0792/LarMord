@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HelloComponent implements OnInit {
 
   courseName: string = "Angular";
+  changeName(){
+    this.courseName = "TypeScript";
+  }
   constructor() { }
 
   ngOnInit() {
