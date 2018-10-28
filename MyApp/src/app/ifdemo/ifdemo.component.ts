@@ -6,12 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ifdemo.component.css']
 })
 export class IfdemoComponent implements OnInit {
+  submitted:boolean=false;
   isAuthenticated:boolean;
-  submitted:boolean = false;
   userName:string;
   onSubmit(name:string,password:string){
-    this.submitted = true;
-    this.userName = name;
+    this.submitted=true;
     if(name==="admin" && password==="admin")
     {
       this.isAuthenticated=true;
@@ -20,6 +19,7 @@ export class IfdemoComponent implements OnInit {
     {
       this.isAuthenticated=false;
     }
+
   }
 
   constructor() { }

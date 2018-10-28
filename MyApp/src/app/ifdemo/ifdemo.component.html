@@ -1,19 +1,19 @@
-<div *ngIf="!submitted">
+<div *ngIf = "!submitted">
+  <h1>Login App</h1>
   <form>
     <label>User Name</label>
-    <input type="text" #username><br/><br/>
-    <label for="password">Password</label>
-    <input type="password" name="password" #password><br/>
+    <input type="text" name="username" #username><br><br>
+    <label>Password</label>
+    <input type="password" name="password" #password><br>
+    <button (click) = "onSubmit(username.value,password.value)">Login</button>
   </form>
-  <button (click)="onSubmit(username.value,password.value)">Login</button>
 </div>
-
-<div *ngIf="submitted">
-  <div *ngIf="isAuthenticated; else failureMsg">
-    <h4> Welcome {{userName}} </h4>
-  </div>
-  <ng-template #failureMsg>
-    <h4> Invalid Login !!! Please try again...</h4>
-  </ng-template>
-  <button type="button" (click)="submitted=false">Back</button>
+<div *ngIf = "submitted">
+  <div *ngIf = "isAuthenticated; else failuremsg">
+      <h1>Welcome {{userName}}</h1>
+   </div> 
+   <ng-template #failuremsg>
+     <h1>Invalid Login! Please try again</h1>
+   </ng-template> 
+   <button (click)="submitted=false">Back</button>
 </div>
